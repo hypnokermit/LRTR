@@ -1,0 +1,131 @@
+//Originally from RP-1 v1.1.1 
+//https://github.com/KSP-RO/RP-0
+//Used under Creative Commons License
+
+//**********************************************************************************
+//	RP-0 TRAINING TIMES
+//
+//	Mercury 7 were announced on April 9, 1959, didn't fly until May 5, 1961
+//	(757 days), but were ready to fly before that. Vanguard 6 (Soviet cosmonaut
+//	group) was selected on May 30, 1960 and finished their training (final exams)
+//	on January 17, 1961. (232 days) First flight was April 12, 1961. (317 days)
+//	We'll call it 300 days of training
+//
+//	The New Nine were announced on September 17, 1962, first flight was not until
+//	John Young on March 23, 1965. (918 Days) Similar time frame for the next group
+//  that were called The Fourteen.
+//
+//	We'll call it 600 days of training
+//
+//**********************************************************************************
+
+//**********************************************************************************
+//
+//  NOTE: Training times for parts have been moved to the support directory
+//  entries for each mod.  Unsupported mods won't have good training times.
+//
+//**********************************************************************************
+
+TRAININGTIMES
+{
+	// Basic Piloting Skills
+	XPlane = 30
+	Suborbital = 30, XPlane										// 60
+	Orbital = 50, Suborbital									// 110
+	Maneuvering = 50, BasicCapsules								// 210
+	Rendezvous = 90, Maneuvering								// 300
+	Docking = 50, Rendezvous									// 350
+	Landing = 100, Maneuvering									// 310
+	EVA = 100
+	
+	BasicCapsules = 50, Orbital									// 160
+	BasicCapsuleEVA = EVA, BasicCapsules						// 260
+	SecondGenCapsules = 50, Docking, EVA						// 500
+	MatureCapsules = 25, SecondGenCapsules						// 525
+	ImprovedCapsules = 25, MatureCapsules						// 550
+
+//**********************************************************************************
+//  Passengers
+//**********************************************************************************
+	Passenger = 10
+	Passenger-Mission = 5	
+
+//**********************************************************************************
+//  X-Planes
+//**********************************************************************************
+	// X-1
+	X-1 = 15, XPlane
+	X-1-Mission = 10
+		
+	// X-15
+	X-15 = 100, Suborbital, XPlane
+	X-15-Mission = 15
+	
+//**********************************************************************************
+//  Capsules
+//**********************************************************************************	
+	// Mercury
+	Mercury = 100, BasicCapsules            // 260
+	Mercury-Mission = 75
+		
+	// Gemini
+	Gemini = 25, SecondGenCapsules          // 525
+	Gemini-Mission = 120
+		
+	// Apollo
+	Apollo = 75, MatureCapsules             // 600
+	Apollo-Mission = 150
+		
+    // Advanced Apollo										  
+    AdvancedApollo = 50, Apollo             // 650
+	AdvancedApollo-Mission = 150
+		
+	// Orion
+	Orion = 50, ImprovedCapsules            // 600
+    Orion-Mission = 200
+		
+    // Advanced Orion										   
+    AdvancedOrion = 50, Orion               //650
+	AdvancedOrion-Mission = 200
+		
+	// LEM
+	EarlyLander = 50, Landing
+    EarlyLander-Mission = 25
+    
+    ApolloLEM = 50, SmallLander	
+	landerCabinMedium = 100, Landing
+		
+	// Vostok
+	Vostok = 50, BasicCapsules              // 210
+	Vostok-Mission = 60
+		
+	// Voskhod
+	Voskhod = 50, BasicCapsuleEVA           // 310
+	Voskhod-Mission = 90
+		
+	// Soyuz
+	Soyuz = 25, MatureCapsules              // 550
+	Soyuz-Mission = 135
+
+//**********************************************************************************
+//  Space Planes
+//**********************************************************************************
+    //Dyna-soar X-20
+    DynaSoar = 50, SecondGenCapsules        // 550
+    DynaSoar-Mission = 100
+    
+    //Shuttles
+    Shuttle = 50, DynaSoar                  // 600
+    Shuttle-Mission = 120
+
+//**********************************************************************************
+//  Command Seats and Consoles
+//**********************************************************************************
+    //Command Seats
+    CommandSeat = 50                        // sitting is easy
+    CommandSeat-Mission = 50
+    
+    //Consoles
+    Console = 25, SecondGenCapsules         // sitting with lots of buttons is harder
+    Console-Mission = 75
+}
